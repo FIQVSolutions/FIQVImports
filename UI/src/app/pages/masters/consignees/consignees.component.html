@@ -1,0 +1,25 @@
+  
+  <mat-card>
+    <mat-card-title class="p-3">Consignees</mat-card-title>
+    <mat-table [dataSource]="consignees" class="mat-elevation-z8">
+  
+      <ng-container matColumnDef="name">
+        <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+        <mat-cell *matCellDef="let consignee"> {{ consignee.name }} </mat-cell>
+      </ng-container>
+  
+      <ng-container matColumnDef="gstNo">
+        <mat-header-cell *matHeaderCellDef> GST No </mat-header-cell>
+        <mat-cell *matCellDef="let consignee"> {{ consignee.gstNo }} </mat-cell>
+      </ng-container>
+  
+      <ng-container matColumnDef="address">
+        <mat-header-cell *matHeaderCellDef> Address </mat-header-cell>
+        <mat-cell *matCellDef="let consignee"> {{ consignee.address }} </mat-cell>
+      </ng-container>
+  
+      <mat-header-row *matHeaderRowDef="displayedConsigneeColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedConsigneeColumns;"></mat-row>
+    </mat-table>
+  </mat-card>
+  

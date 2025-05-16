@@ -1,0 +1,45 @@
+<mat-card>
+    <mat-card-title class="p-3">Cities</mat-card-title>
+    <mat-table [dataSource]="cities" class="mat-elevation-z8">
+  
+      <!-- City Name Column -->
+      <ng-container matColumnDef="CityName">
+        <mat-header-cell *matHeaderCellDef> City Name </mat-header-cell>
+        <mat-cell *matCellDef="let City"> {{ City.cityName }} </mat-cell>
+      </ng-container>
+  
+      <!-- City Code Column -->
+      <ng-container matColumnDef="CityCode">
+        <mat-header-cell *matHeaderCellDef> City Code </mat-header-cell>
+        <mat-cell *matCellDef="let City"> {{ City.cityCode }} </mat-cell>
+      </ng-container>
+  <!-- Country Name Column -->
+  <ng-container matColumnDef="StateName">
+    <mat-header-cell *matHeaderCellDef> State </mat-header-cell>
+    <mat-cell *matCellDef="let City"> {{ City.stateName }} </mat-cell>
+</ng-container>
+
+        <!-- Country Name Column -->
+        <ng-container matColumnDef="CountryName">
+            <mat-header-cell *matHeaderCellDef> Country </mat-header-cell>
+            <mat-cell *matCellDef="let City"> {{ City.countryName }} </mat-cell>
+        </ng-container>
+        
+      <!-- Actions Column -->
+      <ng-container matColumnDef="actions">
+        <mat-header-cell *matHeaderCellDef> Actions </mat-header-cell>
+        <mat-cell *matCellDef="let City">
+          <button mat-icon-button color="primary" (click)="editCity(City)">
+            <mat-icon>edit</mat-icon>
+          </button>
+          <button mat-icon-button color="warn" (click)="deleteCity(City)">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </mat-cell>
+      </ng-container>
+  
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+  </mat-card>
+  

@@ -1,0 +1,17 @@
+.mat-mdc-card {
+    background-color: #fff;
+    border-color: #fff;
+}
+.mat-mdc-table {
+    min-width: 100%;
+    border: 0;
+    border-spacing: 0;
+    table-layout: auto;
+    white-space: normal;
+    background-color: #fff;
+    color: #444444;
+}
+mat-header-cell.mat-mdc-header-cell, mat-cell.mat-mdc-cell, mat-footer-cell.mat-mdc-footer-cell {
+    align-self: stretch;
+    color: #444;
+}
