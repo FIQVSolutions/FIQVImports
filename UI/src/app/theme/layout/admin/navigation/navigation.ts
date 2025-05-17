@@ -91,8 +91,23 @@ export const NavigationItems: NavigationItem[] = [
   url: '/products',
   icon: 'ti ti-package', // better for representing products/items
   breadcrumbs: false
+},{
+    id: 'imports',
+    title: 'Imports',
+    type: 'collapse',
+    icon: 'icon-navigation',
+    children: [
+{
+  id: 'imports', 
+  title: 'Imports', 
+  type: 'item',
+  classes: 'nav-item',
+  url: '/imports',
+  icon: 'ti ti-package', // better for representing products/items
+  breadcrumbs: true
 }
     ]
+  }]
   },
   {
     id: 'page',

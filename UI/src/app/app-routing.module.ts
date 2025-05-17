@@ -61,7 +61,10 @@ const routes: Routes = [
       {
         path: 'register', // Path for the register page
         loadComponent: () => import('./demo/pages/authentication/register/register.component').then(c => c.RegisterComponent)
-      }
+      },{
+        path: 'imports',
+        loadChildren: () => import('../app/pages/Imports/imports.module').then(m => m.ImportsModule)
+      },
     ]
   }
 ];
