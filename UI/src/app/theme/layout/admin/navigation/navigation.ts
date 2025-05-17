@@ -120,5 +120,37 @@ export const NavigationItems: NavigationItem[] = [
         breadcrumbs: true
       }
     ]
+  },
+  {
+    id: 'page',
+    title: 'Pages',
+    type: 'group',
+    icon: 'icon-navigation',
+    children: [
+      {
+        id: 'Authentication',
+        title: 'Authentication',
+        type: 'collapse',
+        icon: 'ti ti-key',
+        children: [
+          {
+            id: 'login',
+            title: 'Login',
+            type: 'item',
+            url: '/login',
+            target: true,
+            breadcrumbs: false
+          },
+          {
+            id: 'register',
+            title: 'Register',
+            type: 'item',
+            url: '/register',
+            target: true,
+            breadcrumbs: false
+          }
+        ]
+      }
+    ]
   }
 ];

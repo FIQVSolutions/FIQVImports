@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AdminComponent } from './theme/layout/admin/admin.component';
+import { GuestComponent } from './theme/layout/guest/guest.component';
 
 const routes: Routes = [
   {
@@ -9,7 +10,7 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        redirectTo: '/dashboard',
+        redirectTo: '/login',
         pathMatch: 'full'
       },
       {
@@ -23,6 +24,25 @@ const routes: Routes = [
       {
         path: 'imports',
         loadChildren: () => import('../app/pages/Imports/imports.module').then((m) => m.ImportsModule)
+      }
+    ]
+  },
+  {
+    path: '',
+    component: GuestComponent,
+    children: [
+      {
+        path: '',
+        redirectTo: '/login', // This also ensures the default route goes to login in the guest view
+        pathMatch: 'full'
+      },
+      {
+        path: 'login', // Path for the login page
+        loadComponent: () => import('./demo/pages/authentication/login/login.component').then((c) => c.LoginComponent)
+      },
+      {
+        path: 'register', // Path for the register page
+        loadComponent: () => import('./demo/pages/authentication/register/register.component').then((c) => c.RegisterComponent)
       }
     ]
   }
