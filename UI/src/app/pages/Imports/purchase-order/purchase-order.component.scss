@@ -1,0 +1,83 @@
+.purchase-order-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px;
+}
+
+.form-section,
+.items-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.form-section mat-form-field,
+.item-row mat-form-field {
+  flex: 1 1 200px;
+  min-width: 200px;
+}
+
+.item-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+}
+
+@media (max-width: 600px) {
+  .form-section,
+  .item-row {
+    flex-direction: column;
+  }
+
+  .form-actions {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+/* Apply label color for outlined mat-form-field */
+.mdc-text-field--outlined .mdc-floating-label {
+  color: #444444 !important;
+}
+
+/* Apply input value color */
+.mdc-text-field__input {
+  color: #444444 !important;
+}
+
+/* Customize appearance when invalid but not disabled */
+.mdc-text-field--outlined:not(.mdc-text-field--disabled).mdc-text-field--invalid .mdc-floating-label {
+  color: #d32f2f !important; /* Material error red or any error color */
+}
+
+/* Optional: also change border color on focus/active */
+.mdc-notched-outline__notch,
+.mdc-notched-outline {
+  border-color: #444444 !important;
+}
+
+/* Ensure mat-select trigger text also follows the same color */
+.mat-mdc-select-value {
+  color: #444444 !important;
+}
+
+/* Tooltip customization (if needed) */
+.mat-mdc-tooltip {
+  color: #ffffff;
+  background-color: #333333;
+}
+.action-icon {
+    padding: 6px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
