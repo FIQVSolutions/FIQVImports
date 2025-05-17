@@ -24,7 +24,7 @@ namespace AIEApi.Controllers
             var pos = await (from po in _context.PurchaseOrders
                              join importer in _context.Importer on po.ImporterId equals importer.ImporterId
                              join consignee in _context.Consignee on po.ConsigneeId equals consignee.ConsigneeId
-                             join user in _context.Users on po.CreatedBy equals user.UserId.ToString()
+                             join user in _context.Users on po.CreatedBy equals user.UserId
                              select new PurchaseOrderDto
                              {
                                  POId = po.POId,
@@ -58,13 +58,13 @@ namespace AIEApi.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<PurchaseOrder>> CreatePO(PurchaseOrder po)
+        public async Task<IActionResult> CreatePO([FromBody] PurchaseOrder po)
         {
+            po.CreatedAt = DateTime.UtcNow;
             _context.PurchaseOrders.Add(po);
             await _context.SaveChangesAsync();
-            return CreatedAtAction(nameof(GetPO), new { id = po.POId }, po);
+            return Ok(po);
         }
-
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdatePO(int id, PurchaseOrder po)
         {

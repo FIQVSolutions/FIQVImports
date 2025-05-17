@@ -32,172 +32,92 @@ export const NavigationItems: NavigationItem[] = [
         breadcrumbs: false
       }
     ]
-  },{
+  },
+  {
     id: 'masters',
     title: 'Masters',
     type: 'collapse',
     icon: 'icon-navigation',
     children: [
       {
-  id: 'importers',
-  title: 'Importers',
-  type: 'item',
-  classes: 'nav-item',
-  url: '/importers',
-  icon: 'ti ti-briefcase', // represents business entities
-  breadcrumbs: false
-},
-{
-  id: 'states',
-  title: 'States',
-  type: 'item',
-  classes: 'nav-item',
-  url: '/states',
-  icon: 'ti ti-map', // for geographical regions
-  breadcrumbs: false
-},
-{
-  id: 'countries',
-  title: 'Country',
-  type: 'item',
-  classes: 'nav-item',
-  url: '/countries',
-  icon: 'ti ti-flag', // commonly used for countries
-  breadcrumbs: false
-},
-{
-  id: 'cities',
-  title: 'City',
-  type: 'item',
-  classes: 'nav-item',
-  url: '/cities',
-  icon: 'ti ti-building-skyscraper', // representing cities or urban areas
-  breadcrumbs: false
-},
-{
-  id: 'consignees',
-  title: 'Consignees',
-  type: 'item',
-  classes: 'nav-item',
-  url: '/consignees',
-  icon: 'ti ti-truck-delivery', // suitable for consignment/delivery
-  breadcrumbs: false
-},
-{
-  id: 'products', 
-  title: 'Products', 
-  type: 'item',
-  classes: 'nav-item',
-  url: '/products',
-  icon: 'ti ti-package', // better for representing products/items
-  breadcrumbs: false
-},{
+        id: 'importers',
+        title: 'Importers',
+        type: 'item',
+        classes: 'nav-item',
+        url: '/masters/importers',
+        icon: 'ti ti-briefcase', // represents business entities
+        breadcrumbs: false
+      },
+      {
+        id: 'states',
+        title: 'States',
+        type: 'item',
+        classes: 'nav-item',
+        url: '/masters/states',
+        icon: 'ti ti-map', // for geographical regions
+        breadcrumbs: false
+      },
+      {
+        id: 'countries',
+        title: 'Country',
+        type: 'item',
+        classes: 'nav-item',
+        url: '/masters/countries',
+        icon: 'ti ti-flag', // commonly used for countries
+        breadcrumbs: false
+      },
+      {
+        id: 'cities',
+        title: 'City',
+        type: 'item',
+        classes: 'nav-item',
+        url: '/masters/cities',
+        icon: 'ti ti-building-skyscraper', // representing cities or urban areas
+        breadcrumbs: false
+      },
+      {
+        id: 'consignees',
+        title: 'Consignees',
+        type: 'item',
+        classes: 'nav-item',
+        url: '/masters/consignees',
+        icon: 'ti ti-truck-delivery', // suitable for consignment/delivery
+        breadcrumbs: false
+      },
+      {
+        id: 'products',
+        title: 'Products',
+        type: 'item',
+        classes: 'nav-item',
+        url: '/masters/products',
+        icon: 'ti ti-package', // better for representing products/items
+        breadcrumbs: false
+      }
+    ]
+  },
+  {
     id: 'imports',
     title: 'Imports',
     type: 'collapse',
     icon: 'icon-navigation',
     children: [
-{
-  id: 'imports', 
-  title: 'Imports', 
-  type: 'item',
-  classes: 'nav-item',
-  url: '/imports',
-  icon: 'ti ti-package', // better for representing products/items
-  breadcrumbs: true
-}
-    ]
-  }]
-  },
-  {
-    id: 'page',
-    title: 'Pages',
-    type: 'group',
-    icon: 'icon-navigation',
-    children: [
       {
-        id: 'Authentication',
-        title: 'Authentication',
-        type: 'collapse',
-        icon: 'ti ti-key',
-        children: [
-          {
-            id: 'login',
-            title: 'Login',
-            type: 'item',
-            url: '/guest/login',
-            target: true,
-            breadcrumbs: false
-          },
-          {
-            id: 'register',
-            title: 'Register',
-            type: 'item',
-            url: '/guest/register',
-            target: true,
-            breadcrumbs: false
-          }
-        ]
-      }
-    ]
-  },
-  {
-    id: 'elements',
-    title: 'Elements',
-    type: 'group',
-    icon: 'icon-navigation',
-    children: [
-      {
-        id: 'typography',
-        title: 'Typography',
+        id: 'purchaseorder',
+        title: 'Purchase Orders',
         type: 'item',
         classes: 'nav-item',
-        url: '/typography',
-        icon: 'ti ti-typography'
+        url: 'imports/purchase-order-list',
+        icon: 'ti ti-clipboard-list', // better for representing products/items
+        breadcrumbs: true
       },
       {
-        id: 'color',
-        title: 'Colors',
+        id: 'purchase-order',
+        title: 'Create PO',
         type: 'item',
         classes: 'nav-item',
-        url: '/color',
-        icon: 'ti ti-brush'
-      },
-      {
-        id: 'tabler',
-        title: 'Tabler',
-        type: 'item',
-        classes: 'nav-item',
-        url: 'https://tabler-icons.io/',
-        icon: 'ti ti-plant-2',
-        target: true,
-        external: true
-      }
-    ]
-  },
-  {
-    id: 'other',
-    title: 'Other',
-    type: 'group',
-    icon: 'icon-navigation',
-    children: [
-      {
-        id: 'sample-page',
-        title: 'Sample Page',
-        type: 'item',
-        url: '/sample-page',
-        classes: 'nav-item',
-        icon: 'ti ti-brand-chrome'
-      },
-      {
-        id: 'document',
-        title: 'Document',
-        type: 'item',
-        classes: 'nav-item',
-        url: 'https://codedthemes.gitbook.io/berry-angular/',
-        icon: 'ti ti-vocabulary',
-        target: true,
-        external: true
+        url: '/imports/purchase-order',
+        icon: 'ti ti-clipboard-list', // better for representing products/items
+        breadcrumbs: true
       }
     ]
   }

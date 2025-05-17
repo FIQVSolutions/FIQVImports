@@ -16,38 +16,13 @@ import { CountryComponent } from './country/country.component';
 import { CitiesComponent } from './cities/cities.component';
 import { ConsigneesComponent } from './consignees/consignees.component';
 import { ProductsComponent } from './products/products.component';
-
-const routes: Routes = [
-  {
-    path: '',
-    component: ImportersComponent
-  },{
-    path: 'states',
-    component: StatesComponent
-  },{
-    path: 'countries',
-    component: CountryComponent
-  },
-  {
-    path: 'cities',
-    component: CitiesComponent
-  },
-  {
-    path: 'consignees',
-    component: ConsigneesComponent
-  },
-  {
-    path: 'products',
-    component: ProductsComponent
-  }
-];
+import { MasterRoutingModule } from './master-routing.module';
 
 @NgModule({
   declarations: [ImportersComponent, StatesComponent, CountryComponent, CitiesComponent, ConsigneesComponent, ProductsComponent],
-  providers: [provideHttpClient()],
   imports: [
     CommonModule,
-    RouterModule.forChild(routes),
+    MasterRoutingModule,
     MatCardModule,
     MatTableModule,
     MatSortModule,
@@ -57,4 +32,4 @@ const routes: Routes = [
     MatIconModule
   ]
 })
-export class MasterModule { }
+export class MasterModule {}
